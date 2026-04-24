@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Filter Fun</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Filter Fun</h1>
+  <p>Upload an image and apply filters</p>
+
+  <input type="file" id="upload" accept="image/*" />
+
+  <div class="image-box">
+    <img id="preview" />
+  </div>
+
+  <div class="filters">
+    <button onclick="setFilter('none')">Normal</button>
+    <button onclick="setFilter('grayscale(100%)')">Grayscale</button>
+    <button onclick="setFilter('sepia(100%)')">Sepia</button>
+    <button onclick="setFilter('invert(100%)')">Invert</button>
+    <button onclick="setFilter('blur(5px)')">Blur</button>
+    <button onclick="setFilter('brightness(150%)')">Bright</button>
+    <button onclick="setFilter('contrast(200%)')">Contrast</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
