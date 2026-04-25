@@ -8,7 +8,7 @@
 <body>
 
   <h1>Filter Fun</h1>
-  <p>Upload an image and apply filters</p>
+  <p>Upload an image and edit it live</p>
 
   <input type="file" id="upload" accept="image/*">
 
@@ -16,14 +16,31 @@
     <img id="preview" />
   </div>
 
+  <!-- BUTTON FILTERS -->
   <div class="buttons">
     <button onclick="setFilter('none')">Normal</button>
     <button onclick="setFilter('grayscale(100%)')">Grayscale</button>
     <button onclick="setFilter('sepia(100%)')">Sepia</button>
     <button onclick="setFilter('invert(100%)')">Invert</button>
-    <button onclick="setFilter('blur(5px)')">Blur</button>
-    <button onclick="setFilter('brightness(150%)')">Bright</button>
-    <button onclick="setFilter('contrast(200%)')">Contrast</button>
+    <button onclick="setFilter('blur(4px)')">Blur</button>
+  </div>
+
+  <!-- SLIDERS -->
+  <div class="sliders">
+    <label>Brightness</label>
+    <input type="range" id="brightness" min="50" max="200" value="100">
+
+    <label>Contrast</label>
+    <input type="range" id="contrast" min="50" max="200" value="100">
+
+    <label>Blur</label>
+    <input type="range" id="blur" min="0" max="10" value="0">
+  </div>
+
+  <!-- EXTRA CONTROLS -->
+  <div class="buttons">
+    <button onclick="resetFilters()">Reset</button>
+    <button onclick="downloadImage()">Download</button>
   </div>
 
   <script src="script.js"></script>
